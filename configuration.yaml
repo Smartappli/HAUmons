@@ -1,10 +1,33 @@
 sensor:
+  - platform: yr
+    name: Weather
+    forecast: 24
+    monitored_conditions:
+      - temperature
+      - symbol
+      - precipitation
+      - windSpeed
+      - pressure
+      - windDirection
+      - humidity
+      - fog
+      - cloudiness
+      - lowClouds
+      - mediumClouds
+      - highClouds
+      - dewpointTemperature
+
+  - platform: worldclock
+    time_zone: America/New_York
+
   - platform: cpuspeed
   
   - platform: bitcoin
     display_options:
       - exchangerate
       - trade_volume_btc
+      
+  - platform: coinmarketcap    
       
   - platform: miflora
     mac: 'xx:xx:xx:xx:xx:xx'
