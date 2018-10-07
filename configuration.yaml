@@ -1,4 +1,11 @@
 sensor:
+  - platform: cpuspeed
+  
+  - platform: bitcoin
+    display_options:
+      - exchangerate
+      - trade_volume_btc
+      
   - platform: miflora
     mac: 'xx:xx:xx:xx:xx:xx'
     name: Flower 1
