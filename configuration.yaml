@@ -140,8 +140,8 @@ script: !include scripts.yaml
   - platform: coinmarketcap    
       
   - platform: miflora
-    mac: 'xx:xx:xx:xx:xx:xx'
-    name: Flower 1
+    mac: 'c4:7c:8d:62:da:c2'
+    name: Phytotron
     force_update: false
     median: 3
     monitored_conditions:
