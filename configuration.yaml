@@ -76,6 +76,13 @@ sensor:
   - platform: worldclock
     time_zone: America/New_York
   
+  - platform: dht
+    sensor: DHT22
+    pin: 23
+    monitored_conditions:
+      - temperature
+      - humidity
+  
   - platform: bitcoin
     display_options:
       - exchangerate
