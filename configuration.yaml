@@ -76,6 +76,8 @@ sensor:
   - platform: worldclock
     time_zone: America/New_York
 
+  - platform: cpuspeed
+  
   - platform: bitcoin
     display_options:
       - exchangerate
@@ -94,7 +96,22 @@ sensor:
     currency_id: 1765
     
   - platform: cointmarketcap
-    currency_id: 
+    currency_id: 512
+    
+  - platform: cointmarketcap
+    currency_id: 2
+    
+  - platform: cointmarketcap
+    currency_id: 825
+  
+  - platform: coinmarketcap
+    currency_id: 2010
+    
+  - platform: coinmarketcap 
+    currency_id: 328
+    
+  - platform: coinmarketcap
+    currency_id: 1958
       
   - platform: miflora
     mac: 'c4:7c:8d:62:da:c2'
@@ -107,19 +124,7 @@ sensor:
       - temperature
       - conductivity
       - battery
-      
-#  - platform: wsdot
-#    api_key: 66f7af7d-5dd2-4347-868d-f925b3f94ab2
-#    travel_time:
-#     - id: 95
-#       name: I-90 Eastbound HOV      
-      
-#  - platform: uber
-#    start_latitude: 37.8116380
-#    start_longitude: -122.2648050
-#    end_latitude: 37.7768520
-#    end_longitude: -122.4155500
-#    server_token: 'BeAPPTDsWZSHLf7fd9OWjZkIezweRw18Q8NltY27'
+  
 
 # Text to speech
 tts:
