@@ -1,1 +1,72 @@
+  default_view:
+    view: yes
+    icon: mdi:home
+    entities:
+      - group.soleil
+      - group.heureny
+      
+  Soleil:
+    view: no
+    name: Soleil
+    entities: 
+      - sun.sun
+      
+  HeureNY:
+    view: no
+    name: Heure de New York
+    entities:
+      - sensor.worldclock_sensor
+      
+  Meteo:
+    view: yes
+    name: Meteo
+    entities: 
+      - group.actuellement
 
+  Actuellement:
+    view: no
+    name: Actuellement
+    entities:
+      - sensor.weather_symbol
+      - sensor.weather_temperature
+      - sensor.weather_pressure
+      - sensor.weather_precipitation      
+      - sensor.weather_wind_speed
+      - sensor.weather_wind_direction
+      - sensor.weather_fog
+      - sensor.weather_high_clouds
+      - sensor.weather_humidity
+      - sensor.weather_low_clouds
+      - sensor.weather_medium_clouds
+
+  Finance:
+    view: yes
+    name: Finance
+    entities:
+      - group.crypto
+
+  Crypto: 
+    view: no
+    name: Crypto monnaie
+    entities:
+      - sensor.bitcoin
+      - sensor.ethereum
+      - sensor.xrp 
+      - sensor.bitcoin_cash 
+      - sensor.eos
+      - sensor.stellar 
+      - sensor.litecoin
+      - sensor.tether
+      - sensor.cardano 
+      - sensor.monero 
+      - sensor.tron 
+      
+  Phytotron:
+    view: no
+    name: Phytotron
+    entities:
+      - sensor.phytotron_temperature
+      - sensor.phytotron_moisture 
+      - sensor.phytotron_light_intensity
+      - sensor.phytotron_conductivity
+      - sensor.phytotron_battery 
