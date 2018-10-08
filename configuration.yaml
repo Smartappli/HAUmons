@@ -1,11 +1,11 @@
 homeassistant:
   # Name of the location where Home Assistant is running
-  name: Home
+  name: Home Assistant
   # Location required to calculate the time the sun rises and sets
   latitude: 0
   longitude: 0
   # Impacts weather/sunrise data (altitude above sea level in meters)
-  elevation: 0
+  elevation: 39
   # metric for Metric, imperial for Imperial
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -76,68 +76,25 @@ sensor:
   - platform: worldclock
     time_zone: America/New_York
 
-  - platform: cpuspeed
-  
   - platform: bitcoin
     display_options:
       - exchangerate
       - trade_volume_btc
       
   - platform: coinmarketcap    
-      
-  - platform: miflora
-    mac: 'xx:xx:xx:xx:xx:xx'
-    name: Flower 1
-    force_update: false
-    median: 3
-    monitored_conditions:
-      - moisture
-      - light
-      - temperature
-      - conductivity
-      - battery
-  
-
-# Text to speech
-tts:
-  - platform: google
-
-# Cloud
-cloud:
-
-group: !include groups.yaml
-automation: !include automations.yaml
-script: !include scripts.yaml
-
-  - platform: yr
-    name: Weather
-    forecast: 24
-    monitored_conditions:
-      - temperature
-      - symbol
-      - precipitation
-      - windSpeed
-      - pressure
-      - windDirection
-      - humidity
-      - fog
-      - cloudiness
-      - lowClouds
-      - mediumClouds
-      - highClouds
-      - dewpointTemperature
-
-  - platform: worldclock
-    time_zone: America/New_York
-
-  - platform: cpuspeed
-  
-  - platform: bitcoin
-    display_options:
-      - exchangerate
-      - trade_volume_btc
-      
-  - platform: coinmarketcap    
+    currency_id: 1027
+    
+  - platform: coinmarketcap
+    currency_id: 52
+    
+  - platform: coinmarketcap
+    currency_id: 1831
+    
+  - platform: coinmarketcap
+    currency_id: 1765
+    
+  - platform: cointmarketcap
+    currency_id: 
       
   - platform: miflora
     mac: 'c4:7c:8d:62:da:c2'
@@ -150,3 +107,27 @@ script: !include scripts.yaml
       - temperature
       - conductivity
       - battery
+      
+#  - platform: wsdot
+#    api_key: 66f7af7d-5dd2-4347-868d-f925b3f94ab2
+#    travel_time:
+#     - id: 95
+#       name: I-90 Eastbound HOV      
+      
+#  - platform: uber
+#    start_latitude: 37.8116380
+#    start_longitude: -122.2648050
+#    end_latitude: 37.7768520
+#    end_longitude: -122.4155500
+#    server_token: 'BeAPPTDsWZSHLf7fd9OWjZkIezweRw18Q8NltY27'
+
+# Text to speech
+tts:
+  - platform: google
+
+# Cloud
+cloud:
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
